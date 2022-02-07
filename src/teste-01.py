@@ -1,4 +1,5 @@
 import functions as fc
+from mainclass import DataHandler
 from tqdm import tqdm
 
 # - programa principal -
@@ -21,3 +22,17 @@ for c in tqdm(range(vezes), 'Progresso Geral', unit='packets', colour='cyan'):
     n1 += dado
 
 print('fim')
+
+# - input -
+# arquivo
+# codec
+
+# - output -
+# arquivo
+# codec
+
+# - options -
+# numero de linhas
+dh = DataHandler()
+dh.input_parameter(arquivo, 'utf8')
+print(dh.in_arquivo)

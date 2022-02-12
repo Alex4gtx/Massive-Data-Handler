@@ -15,7 +15,10 @@ for na in tqdm(range(divx)):
     narquivo = 'out_arq_' + str(fm) + '.txt'
     for n in range(5):
         captured = fc.getlines(arquivo, init_line, qline)
-        fc.escrever_dados(narquivo, captured)
+        try:
+            fc.escrever_dados(narquivo, captured)
+        except NoneType:
+            None
         captured.clear
         init_line += qline
     fm += 1
